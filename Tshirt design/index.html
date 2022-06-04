@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <title>W3.CSS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" href="css/jquery.minicolors.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/konva@7.2.5/konva.min.js"></script>
+  <script src="js/jquery.minicolors.js"></script>
+  <script
+    type="text/javascript"
+    src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"
+  ></script>
+
+  <script type="text/javascript" src="js/script.js"></script>
+
+  <body>
+    <div class="outer">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h3 class="w3-bar-item">Options</h3>
+        <ul>
+          <li id="txt"><img src="images/t.png" /> Add Text</li>
+          <li id="txt2"><img src="images/t.png" /> Add Text</li>
+          <li id="txt3"><img src="images/t.png" /> Add Text</li>
+          <li id="txt4"><img src="images/t.png" /> Add Text</li>
+
+          <li id="art"><img src="images/img.png" />Add Art</li>
+          <li id="art2"><img src="images/img.png" />Add Art</li>
+          <li id="art3"><img src="images/img.png" />Add Art</li>
+          <li id="art4"><img src="images/img.png" />Add Art</li>
+
+          <li id="up">
+            <div id="inp">
+              <label for="file-input">
+                <img src="images/upload.png" /> </label
+              ><input type="file" id="file_input" />
+            </div>
+          </li>
+          <li id="up2">
+            <div id="inp">
+              <label for="file-input2">
+                <img src="images/upload.png" /> </label
+              ><input type="file" id="file_input2" />
+            </div>
+          </li>
+          <li id="up3">
+            <div id="inp">
+              <label for="file-input3">
+                <img src="images/upload.png" /> </label
+              ><input type="file" id="file_input3" />
+            </div>
+          </li>
+          <li id="up4">
+            <div id="inp">
+              <label for="file-input4">
+                <img src="images/upload.png" /> </label
+              ><input type="file" id="file_input4" />
+            </div>
+          </li>
+
+          <li>
+            <img src="images/drop.png" /><input
+              type="text"
+              id="inline"
+              class="demo"
+              data-inline="true"
+              value="#4fc8db"
+            />Product Color
+          </li>
+          <li id="dwn">
+            <img src="images/download.png" />
+            Preview
+          </li>
+          <li id="dwn2">
+            <img src="images/download.png" />
+            Preview
+          </li>
+          <li id="dwn3">
+            <img src="images/download.png" />
+            Preview
+          </li>
+          <li id="dwn4">
+            <img src="images/download.png" />
+            Preview
+          </li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <img src="images/demo1.png" />
+        <img src="images/demo2.png" />
+        <img src="images/demo3.png" />
+        <img src="images/demo1.png" />
+        <img src="images/demo2.png" />
+        <img src="images/demo3.png" />
+      </div>
+      <div class="gallery2">
+        <img src="images/demo1.png" />
+        <img src="images/demo2.png" />
+        <img src="images/demo3.png" />
+        <img src="images/demo1.png" />
+        <img src="images/demo2.png" />
+        <img src="images/demo3.png" />
+      </div>
+      <div class="gallery3">
+        <img src="images/demo1.png" />
+        <img src="images/demo2.png" />
+        <img src="images/demo3.png" />
+        <img src="images/demo1.png" />
+        <img src="images/demo2.png" />
+        <img src="images/demo3.png" />
+      </div>
+      <div class="gallery4">
+        <img src="images/demo1.png" />
+        <img src="images/demo2.png" />
+        <img src="images/demo3.png" />
+        <img src="images/demo1.png" />
+        <img src="images/demo2.png" />
+        <img src="images/demo3.png" />
+      </div>
+      <!-- Page Content -->
+      <div class="main">
+        <div style="width: 100%; height: 76px">
+          <select class="d1" onchange="changed()">
+            <option value="t" selected>T-Shirt</option>
+            <option value="h">Hoodie</option>
+          </select>
+
+          <select class="d2" onchange="changed()">
+            <option value="0" selected>Front</option>
+            <option value="1">Back</option>
+          </select>
+          <span class="pr">Preview</span>
+        </div>
+        <div class="work_div">
+          <img class="img0" src="images/tf.png" />
+          <div class="print"><div id="container"></div></div>
+        </div>
+
+        <div class="work_div1">
+          <img class="img1" src="images/tb.png" />
+          <div class="print1"><div id="container2"></div></div>
+        </div>
+
+        <div class="work_div2">
+          <img class="img2" src="images/hf.png" />
+          <div class="print2"><div id="container3"></div></div>
+        </div>
+
+        <div class="work_div3">
+          <img class="img3" src="images/hb.png" />
+          <div class="print3"><div id="container4"></div></div>
+        </div>
+
+        <div id="menu">
+          <div>
+            <!-- <button id="pulse-button">Pulse</button -->
+            <button id="delete-button">Delete</button>
+          </div>
+        </div>
+
+        <div class="preview"></div>
+        <div class="preview2"></div>
+        <div class="preview3"></div>
+        <div class="preview4"></div>
+
+        <span class="pr1"
+          ><a
+            id="download"
+            download="T_shirt_front.jpg"
+            href=""
+            onclick="download_img(this);"
+            >Download</a
+          ></span
+        >
+        <span class="pr2"
+          ><a
+            id="download"
+            download="T_shirt_front.jpg"
+            href=""
+            onclick="download_img2(this);"
+            >Download</a
+          ></span
+        >
+        <span class="pr3"
+          ><a
+            id="download"
+            download="T_shirt_front.jpg"
+            href=""
+            onclick="download_img3(this);"
+            >Download</a
+          ></span
+        >
+        <span class="pr4"
+          ><a
+            id="download"
+            download="T_shirt_front.jpg"
+            href=""
+            onclick="download_img4(this);"
+            >Download</a
+          ></span
+        >
+      </div>
+    </div>
+    <script src="js/h2c.js"></script>
+    <script type="text/javascript" src="js/kanva4.js"></script>
+    <script type="text/javascript" src="js/kanva3.js"></script>
+    <script type="text/javascript" src="js/kanva2.js"></script>
+    <script type="text/javascript" src="js/kanva.js"></script>
+  </body>
+</html>

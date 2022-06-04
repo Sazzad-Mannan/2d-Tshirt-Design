@@ -1,0 +1,266 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 8%;
+  float: left;
+  height: 100%;
+  background: black;
+  color: white;
+  text-align: center;
+}
+.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar ul li {
+  padding: 10px 0px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.sidebar ul li:hover {
+  opacity: 1;
+}
+.sidebar ul li img {
+  width: 30px;
+  padding: 2px 28px;
+}
+.sidebar ul li i {
+  font-size: 38px;
+  padding: 2px 28px;
+}
+.main {
+  width: 90%;
+  float: left;
+  height: 100%;
+}
+.outer {
+  width: 100%;
+  height: 100%;
+}
+.work_div {
+  width: 500px;
+  height: 500px;
+  float: left;
+}
+.work_div1,
+.work_div2,
+.work_div3 {
+  width: 500px;
+  height: 500px;
+  float: left;
+  display: none;
+}
+.work_div img,
+.work_div1 img,
+.work_div2 img,
+.work_div3 img {
+  background: aquamarine;
+  width: 100%;
+  height: 100%;
+}
+#txt2,
+#txt3,
+#txt4 {
+  display: none;
+}
+#up2,
+#up3,
+#up4 {
+  display: none;
+}
+#dwn2,
+#dwn3,
+#dwn4 {
+  display: none;
+}
+.preview,
+.preview2,
+.preview3,
+.preview4 {
+  height: 500px;
+  width: 500px;
+  float: left;
+  overflow: hidden;
+  padding-left: 182px;
+}
+.preview2,
+.preview3,
+.preview4 {
+  display: none;
+}
+.d1 {
+  float: left;
+  background: black;
+  color: white;
+  font-size: 26px;
+  padding: 7px 44px;
+  margin: -1px 3px;
+}
+.pr {
+  float: left;
+  background: black;
+  color: white;
+  font-size: 26px;
+  padding: 8px 54px;
+  /* margin: 0px 4px; */
+  margin-left: 328px;
+}
+.pr1,
+.pr2,
+.pr3,
+.pr4 {
+  float: right;
+  background: black;
+  color: white;
+  font-size: 26px;
+  padding: 8px 54px;
+  /* margin: 0px 4px; */
+  margin-right: 175px;
+  margin-top: 13px;
+}
+.pr1,
+.pr2,
+.pr3,
+.pr4 {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.d2 {
+  float: left;
+  background: black;
+  color: white;
+  font-size: 26px;
+  padding: 8px 54px;
+  /* margin: 0px 4px; */
+  margin-left: 107px;
+}
+.gallery,
+.gallery2,
+.gallery3,
+.gallery4 {
+  width: 202px;
+  position: absolute;
+  background: white;
+  top: 154px;
+  left: 116px;
+  display: none;
+  overflow-y: scroll;
+  height: 188px;
+  z-index: 1000;
+}
+
+.gallery img,
+.gallery2 img,
+.gallery3 img,
+.gallery4 img {
+  width: 74px;
+  padding: 7px;
+}
+.print,
+.print1,
+.print2,
+.print3 {
+  height: 500px;
+  width: 500px;
+  top: 43px;
+  left: 154px;
+  position: fixed;
+  overflow: hidden;
+}
+#art2,
+#art3,
+#art4 {
+  display: none;
+}
+canvas {
+  height: 100%;
+  width: 100%;
+}
+
+input[type="file"] {
+  color: transparent;
+  margin-left: 11px;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+
+.resizable {
+  background: white;
+  width: 100px;
+  height: 100px;
+  float: left;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.resizable .resizers {
+  width: 100%;
+  height: 100%;
+  border: 3px solid #4286f4;
+  box-sizing: border-box;
+}
+
+.resizable .resizers .resizer {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; /*magic to turn square into circle*/
+  background: white;
+  border: 3px solid #4286f4;
+  position: absolute;
+}
+
+.resizable .resizers .resizer.top-left {
+  left: -5px;
+  top: -5px;
+  cursor: nwse-resize; /*resizer cursor*/
+}
+.resizable .resizers .resizer.top-right {
+  right: -5px;
+  top: -5px;
+  cursor: nesw-resize;
+}
+.resizable .resizers .resizer.bottom-left {
+  left: -5px;
+  bottom: -5px;
+  cursor: nesw-resize;
+}
+.resizable .resizers .resizer.bottom-right {
+  right: -5px;
+  bottom: -5px;
+  cursor: nwse-resize;
+}
+
+#menu {
+  display: none;
+  position: absolute;
+  width: 60px;
+  background-color: white;
+  box-shadow: 0 0 5px grey;
+  border-radius: 3px;
+}
+
+#menu button {
+  width: 100%;
+  background-color: white;
+  border: none;
+  margin: 0;
+  padding: 10px;
+}
+
+#menu button:hover {
+  background-color: lightgray;
+}
